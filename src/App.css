@@ -1,17 +1,9 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+
+
+
+
 
 .App-header {
   background-color: #282c34;
@@ -36,7 +28,444 @@
     transform: rotate(360deg);
   }
 }
-body {
-  background-color: rgb(204, 170, 181); /* Light blue background */
+
+/* App.css */
+.navbar {
+  border-bottom: 4px solid black; /* This creates a black line below the navbar */
+  /* Other styles for your navbar */
 }
 
+/* App.css */
+.navbar::after {
+  content: '';
+  display: block;
+  height: 4px; /* Thickness of the line */
+  background-color: black; /* Color of the line */
+}
+
+.icon {
+  width: 30px; /* Adjust size as needed */
+  height: 30px;
+  
+    color: #fff; /* White icon */
+  
+}
+.list-title {
+  font-size: 24px;
+  
+  
+  /* Other styles */
+}
+/* App.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Adjust the padding as needed */
+  background-color: #f8f9fa; /* Your desired background color */
+}
+
+/* You may not need this if you want the default behavior */
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+/* App.css */
+.header-divider {
+  position: relative;
+}
+
+
+
+
+/* CSS to add a horizontal line below "My List" */
+.my-list-title {
+  position: relative; /* Needed for absolute positioning of the pseudo-element */
+  /* Other styling for "My List" */
+}
+
+.my-list-title::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px; /* Adjust this value to position the line below "My List" */
+  height: 4px; /* Thickness of the line */
+  background-color: black; /* Color of the line */
+}
+/* Add this to your CSS file */
+.link-style {
+  text-decoration: none; /* Removes the underline from the link */
+  color: inherit; /* Inherits the color from the parent element */
+  background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent black overlay */
+  padding: 5px 10px; /* Adds some padding around the text */
+  border-radius: 4px; /* Optional: rounds the corners of the background */
+}
+
+.link-style:hover {
+  background-color: rgba(0, 0, 0, 0.2); /* Slightly darker on hover */
+}
+
+/* App.css */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background-image: url('gymimg.JPG'); 
+  background-size: cover; 
+  background-position: center; 
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+main {
+  flex: 1 0 auto; /* This ensures that the main content expands to push the footer down */
+}
+
+/* App.css */
+
+/* Style for the input box */
+.new-item-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* So padding doesn't affect the width */
+}
+
+
+
+
+/* Style for the "+" icon */
+.plus-icon {
+  cursor: pointer;
+  color: black; /* Green color to match the save button */
+  font-size: 2rem; /* Larger size for the icon */
+}
+
+/* Ensures footer is at the bottom */
+.footer {
+  background-color: #333; /* Example color */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Main container to ensure footer sticks to bottom */
+.main-container {
+  min-height: 100vh;
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+   /* Same as footer height */
+}
+.content-area {
+  flex: 1; /* Grow to fill available space */
+  /* Other styles for padding/margins as needed */
+}
+.list-item {
+  background-color: #fff; /* Light white background */
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 4px; /* Rounded corners for the box */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+/* Style for the "+" icon within a square */
+
+.input-icon-container {
+  position: relative; /* Relative to this container */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  
+  
+}
+
+
+
+
+.add-icon {
+ 
+  font-size: 32px; /* Size of the "+" icon */
+  cursor: pointer;
+  border-radius: 50%; /* Makes the background rounded */
+  padding: 10px; /* Space around the icon */
+  background-color: #f0f0f0; /* Light grey background color */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for transform and background color */
+  display: inline-flex; /* Aligns the FontAwesome icon correctly within the padding */
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  /* Style your icons with some additional space */
+  margin: 0 10px; /* Adds 10px margin on both sides */
+  cursor: pointer; /* Changes the cursor to a pointer on hover */
+}
+
+.new-event-input {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  border: 1px solid #fff; /* White border */
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  width: calc(100% - 22px); /* Full width minus padding and border */
+}
+.public-item {
+  border: 1px solid #ccc; /* Adjust color as needed */
+  padding: 10px;
+  padding-left: 30px; /* Increase left padding to make space for the bullet */
+  margin: 10px 0; /* Adds spacing between items */
+  background-color: #f5f5f5; /* Slight grey background */
+  position: relative; /* Needed for absolute positioning of the pseudo-element */
+  list-style-type: none; /* Removes default list styling */
+}
+.public-item::before {
+  content: '•'; /* This creates the dot */
+  position: absolute; /* Position the pseudo-element absolutely */
+  left: 10px; /* Position the dot inside the padding area */
+  top: 50%; /* Center it vertically */
+  transform: translateY(-50%); /* Align the dot vertically */
+  font-size: 1em; /* Make the bullet the same size as the text */
+  color: black; /* The color of the bullet */
+}
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.input-container {
+  /* margin-bottom: 20px; */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers the input horizontally */
+  margin-bottom: 20px; /* Adjust as needed */
+}
+/* App.css */
+
+.public-list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center children vertically */
+  align-items: center; /* Center children horizontally */
+  height: calc(100vh - 100px); /* Adjust '100px' to account for header/footer */
+  /* Rest of your styles for public-list-container */
+}
+.user-profile-container {
+  padding: 20px; /* Add padding around the container */
+  background-color: #ffffff; /* Assuming a white background */
+  max-width: 300px; /* Maximum width of the profile container */
+  margin: auto; /* Center the container */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* A subtle shadow for some depth */
+  border-radius: 8px; /* Slightly rounded corners for the container */
+}
+
+.user-info {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  margin-bottom: 20px; /* Add some space below the user info section */
+}
+
+.user-info .user-name {
+  font-size: 1.2em; /* Larger font size for the user name */
+  color: #333; /* Dark grey color for the text */
+  margin-top: 10px; /* Space from the top of the container */
+}
+
+.menu-items {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+}
+
+.menu-item {
+  display: block; /* Make each link a block element */
+  padding: 10px 15px; /* Padding inside each menu item for clickability */
+  text-decoration: none; /* Remove the underline from links */
+  color: #333; /* Dark grey color for the text */
+  font-size: 1em; /* Set the font size */
+  border-bottom: 1px solid #eaeaea; /* A line below each item for separation */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.menu-item:last-child {
+  border-bottom: none; /* No border for the last item */
+}
+
+.menu-item:hover {
+  /* background-color: #f5f5f5; */
+  background-color: #e0e0e0; /* Greyish background on hover */
+  cursor: pointer;
+  /* Light grey background on hover */
+}
+
+/* Additional styling for icons, if necessary */
+
+
+/* You may want to style the first menu item differently */
+.settings-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* This adds space between each row */
+}
+
+.settings-container {
+  max-width: 500px; 
+  margin: auto;
+  padding: 60px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 100vh;
+}
+.settings-item {
+  margin-bottom: 10px;
+  /* padding: 10px; */
+  gap: 10px;
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+  transition: box-shadow 0.3s;
+  display: flex; /* This will enable flexbox */
+  align-items: center; 
+}
+.settings-item label {
+  /* Adjust this to shift your labels to the left if needed */
+  /* margin-left: -5px; */
+  /* margin-right: 10px; */
+   /* Adds some space between the label and the input */
+  /* white-space: nowrap;  */
+  min-width: 80px;
+}
+
+input[type="range"] {
+  /* Style for range inputs, if needed */
+  width: 100%; /* To ensure it takes the full width of the container */
+}
+
+button[type="button"] {
+  margin-top: 20px;
+  padding: 10px 20px;
+  width: auto; /* This will make the button only as wide as its content */
+  cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+}
+.settings-item:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.settings-item input[type="text"] {
+  flex-grow: 1; /* Allows the input to grow and fill the space */
+  /* margin-left: 10px; */
+  margin: 0; /* Optional: if you want some space between label and input */
+}
+.custom-icon {
+ 
+  width: 40px; /* Increases width of the custom icon */
+  height: 40px; /* Increases height of the custom icon to maintain aspect ratio */
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out; /* Maintain the aspect ratio if needed */
+  /* Add other styles as needed */
+}
+
+.custom-icon:hover {
+  /* Optional: add hover effect */
+  transform: scale(1.1); /* Slightly enlarges the icon on hover */
+  opacity: 0.8;
+}
+.add-icon:hover {
+  transform: scale(1.1); /* Slightly enlarges the icon on hover */
+  opacity: 0.8;
+  background-color: #d6cbcb;
+  /* Slightly reduces opacity on hover for interaction feedback */
+}
+.centered-content {
+  position: sticky; /* Fixed position */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the container exactly */
+}
+.icon-style {
+  font-size: 24px; /* Adjust the size as needed */
+  cursor: pointer;
+  border-radius: 50%; /* Makes the background rounded */
+  padding: 8px; /* Space around the icon */
+  background-color: #f0f0f0; /* Light grey background color */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for transform and background color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-style:hover {
+  transform: scale(1.1); /* Slightly enlarges the icon on hover */
+  background-color: #e0e0e0; /* Changes background color on hover */
+}
+
+
+.modal-item {
+  margin-bottom: 10px; /* Adds space between the input fields */
+}
+
+.modal-item label {
+  display: block;
+  margin-bottom: 5px; /* Adds space between the label and the input field */
+}
+
+.sphere-input {
+  width: 100%; /* Full width of the modal content */
+  padding: 10px;
+  margin-bottom: 10px; /* Space below each input */
+  border: 1px solid #ccc; /* A light border for the input */
+  border-radius: 4px; /* Rounded corners for the input */
+}
+
+/* Add styles for hover and focus states for better UX */
+.sphere-input:hover {
+  border-color: #999; /* Darker border on hover */
+}
+
+.sphere-input:focus {
+  border-color: #666; /* Even darker border when focused */
+  outline: none; /* Remove default focus outline */
+}
+@media (max-width: 768px) { /* Adjustments for tablets and below */
+  .modal-content {
+    width: 80%; /* Increase width for smaller devices */
+    margin: 10% auto; /* Adjust margin for vertical alignment */
+  }
+}
+
+@media (max-width: 480px) { /* Adjustments for phones */
+  .modal-content {
+    width: 95%; /* Make modal wider on very small screens */
+    padding: 10px; /* Reduce padding */
+  }
+}
+@media (max-width: 768px) {
+  .sticky-footer {
+    display: none; /* Consider hiding non-critical sticky elements on mobile */
+  }
+}
+@media (max-width: 768px) {
+  .section {
+    padding: 10px; /* Reduced from larger desktop padding */
+  }
+  .content {
+    font-size: 14px; /* Smaller text on mobile */
+  }
+}
+.element {
+  max-height: 500px; /* Adjust based on your needs */
+  overflow-y: auto; /* Adds a scrollbar to the element when content overflows */
+}
