@@ -11,19 +11,22 @@ export default function Todos(props) {
     margin:"40px auto"
   }
   return (
-    <div className='container my-3'  style={myStyle}>
-      <h3 className=' my-3'>Todos List</h3>
-      {props.todos.length===0? "No Todos to display":
-
-        props.todos.map((todo)=>{
-            return (
-              <>
-              <TodoItem todo={todo}key={todo.sno} onDelete={props.onDelete}/><hr />
-              </>)
+    <div className='container my-3' style={myStyle}>
+      <div className='row'>
+        <div className='col'>
+          <h3 className=' my-3'>My List</h3>
+          {/* Render the todos for "My List" */}
+        </div>
+        
+      </div>
+      {props.todos.length === 0 ? "No Todos to display" :
+        props.todos.map((todo) => {
+          return (
+            <>
+              <TodoItem todo={todo} key={todo.sno} onDelete={props.onDelete} onToggle={props.onToggle} /><hr />
+            </>
+          )
         })}
-        {/* <TodoItem todo={props.todos[3]}/> */}
-        {/* {props.todos.map(todo => <TodoItem key={todo.sno} todo={todo}/>)} */}
-      Todos works!
     </div>
   )
 }
