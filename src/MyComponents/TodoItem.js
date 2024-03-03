@@ -29,6 +29,7 @@ function TodoItem({ todo, onToggle, onDelete }) {
       <span>{todo.duration}</span>
       <button onClick={() => onDelete(todo)} style={buttonStyle}>Delete</button>
     </div>
+    
   );
 }
 
